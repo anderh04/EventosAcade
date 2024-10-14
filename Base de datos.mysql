@@ -1,0 +1,24 @@
+CREATE DATABASE centro_regional_universitario_de_baru;
+
+USE centro_regional_universitario_de_baru;
+
+CREATE TABLE eventos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    descripcion TEXT NOT NULL,
+    descripcion_larga TEXT NOT NULL,
+    fecha DATE NOT NULL,
+    hora TIME NOT NULL,
+    lugar VARCHAR(255) NOT NULL,
+    organizador VARCHAR(255) NOT NULL,
+    imagen VARCHAR(255) NOT NULL,
+    categoria VARCHAR(100) NOT NULL
+);
+
+INSERT INTO eventos (titulo, descripcion, descripcion_larga, fecha, hora, lugar, organizador, imagen, categoria) VALUES
+('Conferencia sobre Inteligencia Artificial', 'Explorando el futuro de la IA.', 'Un evento para discutir los últimos avances en inteligencia artificial.', '2024-10-20', '09:00:00', 'Sala Principal', 'Departamento de Informática', 'conferencia_ia.jpg', 'Informática'),
+('Taller de Desarrollo Web', 'Aprende a crear tu propia página web.', 'Este taller es ideal para principiantes en desarrollo web.', '2024-10-25', '10:00:00', 'Sala de Clases 4', 'Escuela de Informática', 'taller_desarrollo_web.jpg', 'Informática'),
+('Seminario de Contabilidad Financiera', 'Aprende sobre las mejores prácticas en contabilidad financiera.', 'Un seminario para entender los principios de contabilidad y su aplicación en el mundo real.', '2024-11-01', '11:00:00', 'Sala de Conferencias', 'Facultad de Contabilidad', 'seminario_contabilidad.jpg', 'Contabilidad'),
+('Curso de Normas Internacionales de Contabilidad', 'Actualización en Normas Internacionales de Contabilidad.', 'Este curso se enfoca en las últimas normas y regulaciones contables.', '2024-11-05', '14:00:00', 'Aula 203', 'Departamento de Contabilidad', 'curso_nic.jpg', 'Contabilidad'),
+('Jornada de Salud y Bienestar', 'Un evento sobre la importancia de la salud en la comunidad.', 'Jornada para promover la salud y el bienestar en nuestra comunidad académica.', '2024-11-10', '09:30:00', 'Auditorio Central', 'jornada_salud.jpg', 'Enfermería'),
+('Taller de Cuidados Paliativos', 'Aprende sobre el cuidado de pacientes en etapas avanzadas.', 'Un taller para profesionales y estudiantes interesados en cuidados paliativos.', '2024-11-15', '10:00:00', 'Sala de Clases 3', 'Escuela de Enfermería', 'taller_cuidados_paliativos.jpg', 'Enfermería');
