@@ -1,19 +1,23 @@
-CREATE DATABASE centro_regional_universitario_de_baru;
+-- Crear la base de datos
+CREATE DATABASE IF NOT EXISTS centro_universitario;
 
-USE centro_regional_universitario_de_baru;
+-- Usar la base de datos
+USE centro_universitario;
 
-CREATE TABLE eventos (
+-- Crear la tabla de eventos
+CREATE TABLE IF NOT EXISTS eventos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     titulo VARCHAR(255) NOT NULL,
     descripcion TEXT NOT NULL,
-    descripcion_larga TEXT NOT NULL,
+    descripcion_larga TEXT,
     fecha DATE NOT NULL,
-    hora TIME NOT NULL,
-    lugar VARCHAR(255) NOT NULL,
-    organizador VARCHAR(255) NOT NULL,
-    imagen VARCHAR(255) NOT NULL,
-    categoria VARCHAR(100) NOT NULL
+    hora TIME,
+    lugar VARCHAR(255),
+    organizador VARCHAR(255),
+    imagen VARCHAR(255),
+    categoria VARCHAR(50) NOT NULL
 );
+
 
 INSERT INTO eventos (titulo, descripcion, descripcion_larga, fecha, hora, lugar, organizador, imagen, categoria) VALUES
 ('Conferencia sobre Inteligencia Artificial', 'Explorando el futuro de la IA.', 'Un evento para discutir los últimos avances en inteligencia artificial.', '2024-10-20', '09:00:00', 'Sala Principal', 'Departamento de Informática', 'conferencia_ia.jpg', 'Informática'),
