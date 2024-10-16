@@ -6,16 +6,16 @@ $result = $conn->query($sql);
 
 $informatica = [];
 $contabilidad = [];
-$enfermeria = [];
+$Enfermería = [];
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        if ($row['categoria'] == 'Informatica') {
-            $informatica[] = $row;
+        if ($row['categoria'] == 'Informática') {
+            $Informática[] = $row;
         } elseif ($row['categoria'] == 'Contabilidad') {
             $contabilidad[] = $row;
-        } elseif ($row['categoria'] == 'Enfermeria') {
-            $enfermeria[] = $row;
+        } elseif ($row['categoria'] == 'Enfermería') {
+            $Enfermería[] = $row;
         }
     }
 } else {
@@ -30,7 +30,7 @@ if ($result->num_rows > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos Académicos</title>
-    <link rel="stylesheet" href="evento.css"> <!-- Tu archivo de CSS -->
+    <link rel="stylesheet" href="evento.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
 </head>
 
@@ -107,13 +107,13 @@ if ($result->num_rows > 0) {
     </nav>
 
     <main>
-        <section id="informatica">
+        <section id="Informática">
             <h2>Facultad Informática</h2>
             <p>La Facultad de Informática ha sido un pilar fundamental en el desarrollo tecnológico de nuestra universidad. Fundada en 1995, ha formado a cientos de profesionales en el campo de la programación, el desarrollo de software y la ingeniería informática. Sus egresados lideran proyectos innovadores en el sector de la tecnología y han contribuido al avance del país en la era digital.</p>
             <div id="eventos-lista">
                 <?php
-                if (!empty($informatica)) {
-                    foreach ($informatica as $evento) {
+                if (!empty($Informática)) {
+                    foreach ($Informática as $evento) {
                         echo "<div class='evento'>";
                         echo "<img src='imagenes/" . $evento['imagen'] . "' alt='" . $evento['titulo'] . "' class='evento-img'>";
                         echo "<div class='evento-info'>";
@@ -155,13 +155,13 @@ if ($result->num_rows > 0) {
             </div>
         </section>
 
-        <section id="enfermeria">
+        <section id="Enfermería">
             <h2>Facultad Enfermería</h2>
             <p>La Facultad de Enfermería es una de las más antiguas, fundada en 1975, con una misión clara: formar profesionales comprometidos con el bienestar de las personas. Sus egresados trabajan en hospitales, centros de salud y clínicas, cuidando a los pacientes con empatía y profesionalismo. La facultad ofrece programas de especialización que permiten a los estudiantes ampliar sus conocimientos y capacidades.</p>
             <div id="eventos-lista">
                 <?php
-                if (!empty($enfermeria)) {
-                    foreach ($enfermeria as $evento) {
+                if (!empty($Enfermería)) {
+                    foreach ($Enfermería as $evento) {
                         echo "<div class='evento'>";
                         echo "<img src='imagenes/" . $evento['imagen'] . "' alt='" . $evento['titulo'] . "' class='evento-img'>";
                         echo "<div class='evento-info'>";
