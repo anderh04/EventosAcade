@@ -7,42 +7,61 @@
     <title>Registro Completo de Evento</title>
 </head>
 <body>
+    <div class="form-container">
+        <h2>Registro de Eventos</h2>
+        <form method="POST" action="registro_evento.php">
+            <div class="form-group">
+                <label for="titulo">Título del Evento:</label>
+                <input type="text" id="titulo" name="titulo" placeholder="Escribe el título del evento" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="descripcion">Descripción Breve:</label>
+                <textarea id="descripcion" name="descripcion" rows="3" placeholder="Describe brevemente el evento" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="descripcion_larga">Descripción Larga:</label>
+                <textarea id="descripcion_larga" name="descripcion_larga" rows="5" placeholder="Descripción detallada del evento"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="fecha">Fecha del Evento:</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="hora">Hora del Evento (Opcional):</label>
+                <input type="time" id="hora" name="hora">
+            </div>
+            
+            <div class="form-group">
+                <label for="lugar">Lugar del Evento:</label>
+                <input type="text" id="lugar" name="lugar" placeholder="Lugar del evento" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="organizador">Organizador:</label>
+                <input type="text" id="organizador" name="organizador" placeholder="Nombre del organizador" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="imagen">URL de la Imagen:</label>
+                <input type="url" id="imagen" name="imagen" placeholder="URL de la imagen (opcional)">
+            </div>
 
-    <h2 style="text-align:center;">Registro Completo de Evento</h2>
+            <div class="form-group">
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" name="categoria" required>
+                    <option value="" disabled selected>Selecciona una categoría</option>
+                    <option value="Informatica">Informática</option>
+                    <option value="Enfermeria">Enfermería</option>
+                    <option value="Contabilidad">Contabilidad</option>
+                </select>
+            </div>
 
-    <form action="registrar_evento.php" method="post">
-        <label for="titulo">Título del Evento:</label>
-        <input type="text" id="titulo" name="titulo" required>
-
-        <label for="descripcion">Descripción Corta:</label>
-        <textarea id="descripcion" name="descripcion" required></textarea>
-
-        <label for="descripcion_larga">Descripción Larga:</label>
-        <textarea id="descripcion_larga" name="descripcion_larga"></textarea>
-
-        <label for="fecha">Fecha del Evento:</label>
-        <input type="date" id="fecha" name="fecha" required>
-
-        <label for="hora">Hora del Evento:</label>
-        <input type="time" id="hora" name="hora">
-
-        <label for="lugar">Lugar del Evento:</label>
-        <input type="text" id="lugar" name="lugar">
-
-        <label for="organizador">Organizador:</label>
-        <input type="text" id="organizador" name="organizador">
-
-        <label for="imagen">Imagen (URL):</label>
-        <input type="text" id="imagen" name="imagen">
-
-        <label for="categoria">Categoría:</label>
-        <select id="categoria" name="categoria" required>
-            <option value="Informatica">Informática</option>
-            <option value="Enfermeria">Enfermería</option>
-            <option value="Contabilidad">Contabilidad</option>
-        </select>
-
-        <button type="submit">Registrar Evento</button>
-    </form>
+            <button type="submit">Registrar Evento</button>
+        </form>
+    </div>
 </body>
 </html>
