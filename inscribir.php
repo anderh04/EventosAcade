@@ -35,7 +35,7 @@ if (isset($_GET['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscripción a Evento</title>
-    <link rel="stylesheet" href="evento.css">
+    <link rel="stylesheet" href="inscripcion.css">
 </head>
 
 <body>
