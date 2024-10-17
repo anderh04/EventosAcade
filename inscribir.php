@@ -17,7 +17,7 @@ if (isset($_GET['id'])) {
         exit;
     }
 
-    $sql_inscritos = "SELECT nombre, correo FROM inscripciones WHERE evento_id = ?";
+    $sql_inscritos = "SELECT nombre, apellido, correo FROM inscripciones WHERE evento_id = ?";
     $stmt_inscritos = $conn->prepare($sql_inscritos);
     $stmt_inscritos->bind_param("i", $evento_id);
     $stmt_inscritos->execute();
@@ -52,8 +52,13 @@ if (isset($_GET['id'])) {
         <input type="hidden" name="evento_id" value="<?php echo $evento_id; ?>">
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" required>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" required>
+
         <label for="correo">Correo:</label>
         <input type="email" name="correo" required>
+
         <button type="submit" class='btn-inscribir'>Inscribirse</button>
         <a href="index.php" class="btn-regresar">Volver a la lista de eventos</a>
     </form>
@@ -63,7 +68,7 @@ if (isset($_GET['id'])) {
     if ($inscripciones->num_rows > 0) {
         echo "<ul class='lista-inscritos'>";
         while ($inscrito = $inscripciones->fetch_assoc()) {
-            echo "<li><strong>" . htmlspecialchars($inscrito['nombre']) . "</strong> - " . htmlspecialchars($inscrito['correo']) . "</li>";
+            echo "<li><strong>" . htmlspecialchars($inscrito['nombre']) . " " . htmlspecialchars($inscrito['apellido']) . "</strong> - " . htmlspecialchars($inscrito['correo']) . "</li>";  // Mostramos nombre y apellido
         }
         echo "</ul>";
     } else {
