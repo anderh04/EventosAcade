@@ -31,8 +31,7 @@ if ($result->num_rows > 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos Académicos</title>
     <link rel="stylesheet" href="evento.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
 
 <body>
 
@@ -111,24 +110,25 @@ if ($result->num_rows > 0) {
             <h2>Facultad Informática</h2>
             <p>La Facultad de Informática ha sido un pilar fundamental en el desarrollo tecnológico de nuestra universidad. Fundada en 1995, ha formado a cientos de profesionales en el campo de la programación, el desarrollo de software y la ingeniería informática. Sus egresados lideran proyectos innovadores en el sector de la tecnología y han contribuido al avance del país en la era digital.</p>
             <div id="eventos-lista">
-                <?php
-                if (!empty($Informática)) {
-                    foreach ($Informática as $evento) {
-                        echo "<div class='evento'>";
-                        echo "<img src='imagenes/" . $evento['imagen'] . "' alt='" . $evento['titulo'] . "' class='evento-img'>";
-                        echo "<div class='evento-info'>";
-                        echo "<h3>" . $evento['titulo'] . "</h3>";
-                        echo "<p>" . $evento['descripcion'] . "</p>";
-                        echo "<p><strong>Fecha:</strong> " . $evento['fecha'] . "</p>";
-                        echo "<a href='detalle_evento.php?id=" . $evento['id'] . "' class='btn-detalle'>Ver más detalles</a>";
-                        echo "</div>";
-                        echo "</div>";
-                    }
-                } else {
-                    echo "<p>No hay eventos disponibles en Informática.</p>";
-                }
-                ?>
-            </div>
+            <?php
+if (!empty($Informática)) {
+    foreach ($Informática as $evento) {
+        echo "<div class='evento'>";
+        echo "<img src='imagenes/" . $evento['imagen'] . "' alt='" . $evento['titulo'] . "' class='evento-img'>";
+        echo "<div class='evento-info'>";
+        echo "<h3>" . $evento['titulo'] . "</h3>";
+        echo "<p>" . $evento['descripcion'] . "</p>";
+        echo "<p><strong>Fecha:</strong> " . $evento['fecha'] . "</p>";
+        echo "<a href='detalle_evento.php?id=" . $evento['id'] . "' class='btn-detalle'>Ver más detalles</a>";
+        echo "<a href='inscribir_evento.php?id=" . $evento['id'] . "' class='btn-inscribir'>Inscribirse</a>";
+        echo "</div>";
+        echo "</div>";
+    }
+} else {
+    echo "<p>No hay eventos disponibles en Informática.</p>";
+}
+?>
+
         </section>
 
         <section id="contabilidad">
@@ -145,6 +145,7 @@ if ($result->num_rows > 0) {
                         echo "<p>" . $evento['descripcion'] . "</p>";
                         echo "<p><strong>Fecha:</strong> " . $evento['fecha'] . "</p>";
                         echo "<a href='detalle_evento.php?id=" . $evento['id'] . "' class='btn-detalle'>Ver más detalles</a>";
+                        echo "<a href='inscribir_evento.php?id=" . $evento['id'] . "' class='btn-inscribir'>Inscribirse</a>";
                         echo "</div>";
                         echo "</div>";
                     }
@@ -169,6 +170,7 @@ if ($result->num_rows > 0) {
                         echo "<p>" . $evento['descripcion'] . "</p>";
                         echo "<p><strong>Fecha:</strong> " . $evento['fecha'] . "</p>";
                         echo "<a href='detalle_evento.php?id=" . $evento['id'] . "' class='btn-detalle'>Ver más detalles</a>";
+                        echo "<a href='inscribir_evento.php?id=" . $evento['id'] . "' class='btn-inscribir'>Inscribirse</a>";
                         echo "</div>";
                         echo "</div>";
                     }
@@ -178,6 +180,7 @@ if ($result->num_rows > 0) {
                 ?>
             </div>
         </section>
+
     </main>
 
     <script src="script.js"></script>
