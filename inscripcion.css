@@ -5,6 +5,7 @@
 }
 
 body {
+    background-image: url('imagenes/unach.jpeg');
     font-family: Arial, sans-serif;
     background-color: #f0f4f8;
     color: #333;
@@ -18,7 +19,7 @@ body {
 
 h2 {
     font-size: 30px;
-    color: #007BFF;
+    color: #f3f2f2;
     text-align: center;
     margin-bottom: 20px;
     position: relative;
@@ -26,15 +27,15 @@ h2 {
 }
 
 @keyframes color-change {
-    0% { color: #007BFF; }
-    50% { color: #0056b3; }
-    100% { color: #007BFF; }
+    0% { color: #e6eaef; }
+    50% { color: #ecf0f5; }
+    100% { color: #f0f3f7; }
 }
 
 h3 {
     font-size: 20px;
     margin-top: 30px;
-    color: #007BFF;
+    color: #f1f9f9;
     text-align: center;
 }
 
