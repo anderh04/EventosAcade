@@ -99,9 +99,9 @@ if ($result->num_rows > 0) {
 
     <nav class="menu-principal">
         <ul>
-            <li><a href="#informatica"><i class="fas fa-laptop-code"></i> Informática</a></li>
+            <li><a href="#Informática"><i class="fas fa-laptop-code"></i> Informática</a></li>
             <li><a href="#contabilidad"><i class="fas fa-calculator"></i> Contabilidad</a></li>
-            <li><a href="#enfermeria"><i class="fas fa-user-nurse"></i> Enfermería</a></li>
+            <li><a href="#Enfermería"><i class="fas fa-user-nurse"></i> Enfermería</a></li>
         </ul>
     </nav>
 
@@ -180,6 +180,50 @@ if (!empty($Informática)) {
                 ?>
             </div>
         </section>
+
+        <footer>
+    <div class="footer-section">
+        <h2>Redes Sociales</h2>
+        <div class="social-icons">
+            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <div class="footer-section">
+        <h2>Marcas Asociadas</h2>
+        <div class="logo-section">
+            <img src="logo1.png" alt="Logo 1">
+            <img src="logo2.png" alt="Logo 2">
+            <img src="logo3.png" alt="Logo 3">
+            <img src="logo4.png" alt="Logo 4">
+        </div>
+    </div>
+
+    <div class="footer-section">
+        <h2>Enlaces Legales</h2>
+        <div class="footer-links">
+            <a href="#informatica">Facultad de Informática</a></li>
+            <a href="#contabilidad">Facultad de Contabilidad</a></li>
+            <a href="#enfermeria">Facultad de Enfermería</a></li>
+            <a href="#">Aviso Legal</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Condiciones de Uso</a>
+        </div>
+    </div>
+
+    <div class="footer-section contact-info">
+            <h3>Centro Regional Universitario de Barú</h3>
+            <p>&copy; 2024 Marca Registrada. Todos los derechos reservados.</p>
+            <p><strong>Dirección:</strong> Calle Principal, Barriada San Valentín, Barú, Chiriquí, Panamá</p>
+            <p><strong>Teléfono:</strong> +507 1234-5678</p>
+            <p><strong>Email:</strong> info@crubar.edu.pa</p>
+        </div>
+</footer>
+
 
     </main>
 
