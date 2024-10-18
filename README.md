@@ -1,6 +1,6 @@
 # 🌐 Proyecto PHP
 
-![Logo del Proyecto](ruta/al/logo.png) <!-- Asegúrate de agregar una imagen de tu proyecto aquí -->
+![Logo del Proyecto](https://cdn-images-1.medium.com/max/900/0*YbKH9QBFFrtVVsae) <!-- Asegúrate de agregar una imagen de tu proyecto aquí -->
 
 ## 🚀 Descripción
 
