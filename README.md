@@ -16,7 +16,3 @@ Bienvenido a **Proyecto PHP**, una aplicación web diseñada para [breve descrip
 ## 📦 Instalación
 
 Sigue estos pasos para instalar y ejecutar el proyecto:
-
-1. **Clona el repositorio**:
-   ```bash
-   git clone https://github.com/tu-usuario/tu-proyecto.git
