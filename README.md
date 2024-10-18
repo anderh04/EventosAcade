@@ -1,6 +1,6 @@
 # 🌐 Proyecto PHP
 
-![Logo del Proyecto](https://cdn-images-1.medium.com/max/900/0*YbKH9QBFFrtVVsae) <!-- Asegúrate de agregar una imagen de tu proyecto aquí -->
+![Logo del Proyecto](https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:quality(100)/2024_1_8_638403502101844225_php-1-1.jpg) <!-- Asegúrate de agregar una imagen de tu proyecto aquí -->
 
 ## 🚀 Descripción
 
