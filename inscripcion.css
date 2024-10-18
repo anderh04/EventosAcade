@@ -53,21 +53,70 @@ h3 {
     transition: all 0.3s ease;
 }
 
-form {
-    background-color: #fff;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    max-width: 450px;
-    width: 100%;
-    margin: 20px auto;
-    border: 2px solid #007BFF;
-    transition: transform 0.3s ease;
+.form-inscripcion {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #036b94;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-form:hover {
-    transform: scale(1.05);
+.form-inscripcion label {
+    font-size: 16px;
+    color: #f4ecec;
+    margin-top: 15px;
+    display: block;
+    position: relative;
+    padding-left: 30px;
 }
+
+.form-inscripcion label i {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #32cd32; 
+}
+
+.form-inscripcion input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-inscribir {
+    background-color: #32cd32;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-inscribir:hover {
+    background-color: #28a745;
+}
+
+.btn-regresar {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #333;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-regresar:hover {
+    background-color: #555;
+}
+
 
 label {
     display: block;
@@ -81,7 +130,7 @@ input[type="email"] {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
-    border: 2px solid #007BFF;
+    border: 2px solid #e4e7ea;
     border-radius: 10px;
     font-size: 16px;
     transition: border-color 0.3s ease;
@@ -91,28 +140,6 @@ input[type="text"]:focus,
 input[type="email"]:focus {
     border-color: #0056b3;
     outline: none;
-}
-
-button,
-.btn-regresar {
-    background-color: #007BFF;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    text-align: center;
-    display: inline-block;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-    width: 100%;
-    text-decoration: none;
-}
-
-button:hover,
-.btn-regresar:hover {
-    background-color: #0056b3;
 }
 
 .lista-inscritos {
