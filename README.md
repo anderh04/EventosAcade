@@ -13,8 +13,3 @@ Este proyecto es una aplicación web que permite [breve descripción de la funci
 - **XAMPP** o cualquier servidor local compatible (LAMP/WAMP)
 - Navegador web moderno
 
-## Instalación
-
-1. Clona este repositorio en tu máquina local:
-   ```bash
-   git clone https://github.com/tu-usuario/tu-proyecto.git
