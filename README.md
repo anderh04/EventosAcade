@@ -1,6 +1,6 @@
 # 🌐 Proyecto PHP
 
-![Logo del Proyecto](https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:quality(100)/2024_1_8_638403502101844225_php-1-1.jpg) <!-- Asegúrate de agregar una imagen de tu proyecto aquí -->
+![Logo del Proyecto](https://www.cheggindia.com/wp-content/uploads/2023/09/php-full-form.png) <!-- Asegúrate de agregar una imagen de tu proyecto aquí -->
 
 ## 🚀 Descripción
 
