@@ -1,12 +1,11 @@
 <?php
 session_start();
-include 'db.php'; // Asegúrate de tener tu conexión a la base de datos aquí
+include 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $cedula = $_POST['cedula'];
     $password = $_POST['password'];
 
-    // Consulta para verificar las credenciales
     $sql = "SELECT * FROM usuarios WHERE cedula = ? AND password = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ss", $cedula, $password); // Usa un hash en la contraseña en producción
@@ -14,9 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        // Si se encuentran coincidencias, iniciar sesión
         $_SESSION['cedula'] = $cedula;
-        header("Location: index.php"); // Redirigir a la página de eventos
+        header("Location: index.php");
         exit();
     } else {
         $error = "Cédula o contraseña incorrectos.";
@@ -31,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="login.css"> <!-- Incluye tu CSS para el formulario -->
+    <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
