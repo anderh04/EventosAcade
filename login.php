@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($result->num_rows > 0) {
         $_SESSION['cedula'] = $cedula;
-        header("Location: index.php");
+        header("Location: evento.php");
         exit();
     } else {
         $error = "Cédula o contraseña incorrectos.";
@@ -33,6 +33,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
+<div class="logo-container">
+        <img src="imagenes\elysiajs.svg" alt="Logo de la Universidad" class="logo">
+    </div>
     <h2>Iniciar Sesión</h2>
     <?php if (isset($error)): ?>
         <p style="color: red;"><?php echo $error; ?></p>
