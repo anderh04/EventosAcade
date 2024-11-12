@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #28a745;
+}
+
+.description {
+    background: #28a745;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.pedido-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.pedido-list th, .pedido-list td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.pedido-list th {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+}
+
+.pedido-list tbody tr {
+    transition: background-color 0.3s;
+}
+
+.pedido-list tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+.pedido-list tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.pedido-list tbody tr td {
+    position: relative;
+}
+
+.pedido-list tbody tr td button {
+    padding: 8px 12px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pedido-list tbody tr td button:hover {
+    background-color: #218838;
+}
+
+.pedido-list tbody tr td button[data-tooltip]:hover:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -30px;
+    left: 0;
+    padding: 5px 8px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 0.9em;
+    white-space: nowrap;
+    z-index: 1;
+}
